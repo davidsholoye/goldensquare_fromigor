@@ -1,4 +1,4 @@
-from lib.diaryEntry import *
+from lib.diaryEntry_method import *
 
 def test_format_returns_formatted_entry():
     diary = DiaryEntry('my title', 'these are the contents')
