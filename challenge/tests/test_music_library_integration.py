@@ -8,7 +8,7 @@ def test_adding_two_tracks_returns_in_track_list():
     library.add(track_1)
     library.add(track_2)
     actual = library.tracks
-    assert actual == [['Patience', "Guns n' Roses"],['Its my life', "Bon Jovi"]]
+    assert actual == [track_1, track_2]
 
 def test_searching_for_word_returns_matching_track():
     library = MusicLibrary()
@@ -17,7 +17,7 @@ def test_searching_for_word_returns_matching_track():
     library.add(track_1)
     library.add(track_2)
     actual = library.search_for_word('life')
-    assert actual == ['Patience life', 'Its my life']
+    assert actual == [track_1.title, 'Its my life']
 
 def test_searching_for_partial_word_returns_track():
     library = MusicLibrary()
